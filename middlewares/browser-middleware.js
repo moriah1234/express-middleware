@@ -3,8 +3,9 @@ function browserMiddleware(req, res, next) {
     const isChromeUser = userAgent.includes('Chrome')
     if (isChromeUser && req.originalUrl !== '/error') {
         res.redirect('/error');
+    } else {
+        next();
     }
-    next();
 }
 
 module.exports = browserMiddleware;
