@@ -89,14 +89,19 @@ router.get('/', (req, res) => {
 
 <body>
     <h1>Express Middleware</h1>
-    <form action="/login" method="post">
-        <input type="text" placeholder="username" />
-        <input type="text" placeholder="password" />
-        <input type="text" placeholder="age" />
-        <div><span>premium?</span><input type="checkbox" /></div>
-        <button>Sign Up</button>
+    <form action="/signup/" method="POST">
+        <input type="text" placeholder="username" name="username" />
+        <input type="text" placeholder="password" name="password" />
+        <input type="text" placeholder="age" name="age" />
+        <input type="submit" value="button" />
     </form>
 </body>`)
+})
+
+router.post('/signup/', (req, res) => {
+
+    console.log('req: ', req.body);
+    res.send('fdkjjnd')
 })
 
 
