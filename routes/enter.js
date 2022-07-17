@@ -46,7 +46,7 @@ router.get('/', (req, res) => {
         background: #fff;
     }
 
-    button {
+    input[type=submit] {
         background-color: #fff;
         border: #000 1px solid;
         color: #000;
@@ -61,7 +61,7 @@ router.get('/', (req, res) => {
         margin-bottom: -1.5vh;
     }
 
-    button:hover {
+    input[type=submit]:hover {
         background-color: #000;
         color: #fff;
         border-color: #fff;
@@ -89,15 +89,18 @@ router.get('/', (req, res) => {
 
 <body>
     <h1>Express Middleware</h1>
-    <form action="/login" method="post">
-        <input type="text" placeholder="username" />
-        <input type="text" placeholder="password" />
-        <input type="text" placeholder="age" />
-        <div><span>premium?</span><input type="checkbox" /></div>
-        <button>Sign Up</button>
+    <form action="/enter" method="POST">
+        <input type="text" placeholder="username" name="username" />
+        <input type="text" placeholder="password" name="password"/>
+        <input type="text" placeholder="age" name="age"/>
+        <input type="submit" value="Enter"/>
     </form>
 </body>`)
 })
 
-
+router.post('/', (req, res) => {
+    console.log('req: ', req.body);
+    console.log('jdidbvcudbcdcvfcfr');
+    res.send('gsycjdfyueufci b')
+})
 module.exports = router;

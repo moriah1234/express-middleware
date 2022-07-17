@@ -1,15 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 20px;
+            font-family: cursive;
+        }
 
+        body {
+            background-image: linear-gradient(to right top, #000c1e, #001b26, #02262b, #12312d, #273b2e);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        input[type=text] {
+            border: #fff solid .1vw;
+            background-color: #0000;
+            border-radius: 50vw;
+            height: 6vh;
+            width: 15vw;
+            text-align: center;
+            color: #fff;
+        }
+
+        input[type=text]:focus {
+            box-shadow: 0 0 15px 1px #fff3;
+        }
+
+        ::-moz-selection {
+            /* Code for Firefox */
+            color: #000;
+            background: #fff;
+        }
+
+        ::selection {
+            color: #000;
+            background: #fff;
+        }
+
+        /* background-image: linear-gradient(to right top, #1e0000, #2b070d, #390619, #490425, #570034); */
+        input[type=submit] {
+            background-color: #0000;
+            border: #fff 1px solid;
+            color: #fff;
+            border-radius: 50vh;
+            height: 5vh;
+            width: 10vw
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            margin-bottom: -1.5vh;
+        }
+
+        input[type=submit]:hover {
+            background-color: #fff;
+            color: #000;
+            border-color: #000;
+            transition: .3s;
+        }
+
+        form {
+            width: 25vw;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            /* background-color: #fff3; */
+            border-radius: 3vw;
+            /* box-shadow: 0 0 15px 1px #fff3; */
+
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-direction: column; */
+        }
+
+        span {
+            margin-right: 1vw;
+        }
+
+        h2 {
+            margin-top: -5vh;
+        }
     </style>
 </head>
+
 <body>
-    <h1>You are in!</h1>
+    <h1>The Anti Robot Movement</h1>
+    <div>
+        <h2>We are here to protect humanity. <br /> Our future is in grave danger! <br /> Say no to robots today to
+            protect tommorow.</h2>
+        <form action="/enter" method="POST">
+            <input type="text" placeholder="username" name="username" />
+            <input type="text" placeholder="password" name="password" />
+            <input type="text" placeholder="age" name="age" />
+            <input type="submit" value="Enter" />
+        </form>
+    </div>
 </body>
+
 </html>
