@@ -2,7 +2,7 @@ const express = require('express')
 const enterRouter = require('./routes/enter')
 const errorRouter = require('./routes/error')
 const bodyParser = require('body-parser');
-const homeRouter = require('./routes/home')
+const homeRouter = require('./routes/home');
 const app = express();
 
 
