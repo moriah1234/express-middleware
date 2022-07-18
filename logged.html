@@ -11,19 +11,21 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #000;
             font-size: 20px;
-            font-family: cursive;
+            font-family: 'Courier New', Courier, monospace;
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
         }
 
         body {
-            background-color: black;
+            background-color: #000;
             height: 100vh;
             width: 100vw;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             flex-direction: column;
+
         }
 
         ::-moz-selection {
@@ -36,10 +38,9 @@
             background: #fff;
         }
 
-        input[type=text] {
+        /* input[type=text] {
             border: #fff solid .1vw;
             background-color: #0000;
-            border-radius: 50vw;
             height: 6vh;
             width: 15vw;
             text-align: center;
@@ -51,17 +52,17 @@
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: -1.5vh;
+            font-size: 2em;
+            margin-bottom: 1.5vh;
+            color: #000;
         }
 
         input[type=submit] {
             background-color: #0000;
             border: #fff 1px solid;
             color: #fff;
-            border-radius: 50vh;
             height: 5vh;
-            width: 10vw
+            width: 7vw
         }
 
         input[type=submit]:hover {
@@ -72,16 +73,19 @@
         }
 
         form {
-            width: 25vw;
-            height: 50vh;
+            width: 30vw;
+            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             flex-direction: column;
-            border-radius: 3vw;
+            background-color: #86A8E790;
+            border-bottom-left-radius: 2vw;
+            border-top-left-radius: 2vw;
         }
 
-        div {
+
+        .container {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,22 +96,79 @@
         }
 
         h2 {
-            margin-top: -5vh;
+            color: #000;
+        }
+
+        .info {
+            background-color: #FFF;
+            color: #000;
+            height: 80vh;
+            width: 50vw;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 2vw;
+            line-height: 9vh;
+            border-top-right-radius: 2vw;
+            border-bottom-right-radius: 2vw;
+        }
+        p {
+            transform: rotateX(50deg) rotateZ(180deg);
+        } */
+
+        .container {
+            background-color: #bfbfbf;
+            height: 90vh;
+            width: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topbar {
+            background-image: linear-gradient(to right top, #1c3070, #293f7e, #374f8b, #456099, #5370a6, #5e7db1, #6a8abb, #7697c6, #82a3d0, #8eb0da, #9abce5, #a7c9ef);
+            height: 9vh;
+            width: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 3vw;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .s-container {
+            height: 81vh;
+            width: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     </style>
 </head>
 
 <body>
-    <h1>The Anti Robot Movement</h1>
-    <div>
-        <h2>We are here to protect humanity. <br /> Our future is in grave danger! <br /> Say no to robots today to
-            protect tommorow.</h2>
-        <form action="/enter" method="POST">
-            <input type="text" placeholder="username" name="username" />
-            <input type="text" placeholder="password" name="password" />
-            <input type="text" placeholder="age" name="age" />
-            <input type="submit" value="Enter" />
-        </form>
+    <div class="container">
+        <div class="topbar">
+            <h1>The Anti Robot Movement</h1>
+        </div>
+        <div class="s-container">
+            <div class="info">
+                <h2>We are here to protect humanity. <br />
+                    Our future is in grave danger! <br />
+                    Say no to robots today to protect tommorow.</h2>
+            </div>
+            <form action="/enter" method="POST">
+                <input type="text" placeholder="username" name="username" />
+                <input type="text" placeholder="password" name="password" />
+                <p>jijoinjtf5fvj</p>
+                <input type="text" placeholder="prove your unrobotness" name="age" />
+                <input type="submit" value="Enter" />
+            </form>
+        </div>
     </div>
 </body>
 
