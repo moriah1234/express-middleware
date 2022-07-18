@@ -3,6 +3,8 @@ const enterRouter = require('./routes/enter')
 const errorRouter = require('./routes/error')
 const bodyParser = require('body-parser');
 const homeRouter = require('./routes/home');
+const commentRouter = require('./routes/comments');
+
 const app = express();
 
 
@@ -29,6 +31,7 @@ app.use('/enter', enterMiddleware)
 app.use('/error', errorRouter)
 app.use('/', homeRouter)
 app.use('/enter', enterRouter)
+app.use('/comment', commentRouter)
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
