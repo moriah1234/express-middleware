@@ -1,5 +1,3 @@
-{"timeStamp":"2022-07-17T12:46:45.261Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36","remoteIp":"::1","url":"/"}
-{"timeStamp":"2022-07-17T12:46:47.629Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36","remoteIp":"::1","url":"/enter"}
-{"timeStamp":"2022-07-17T12:46:50.343Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36","remoteIp":"::1","url":"/enter"}
-{"timeStamp":"2022-07-17T12:46:54.764Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36","remoteIp":"::1","url":"/enter"}
-{"timeStamp":"2022-07-17T12:46:57.553Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36","remoteIp":"::1","url":"/enter"}
+{"timeStamp":"2022-07-17T13:06:47.757Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","remoteIp":"::1","url":"/enter"}
+{"timeStamp":"2022-07-17T13:06:50.132Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","remoteIp":"::1","url":"/enter"}
+{"timeStamp":"2022-07-17T13:06:50.139Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","remoteIp":"::1","url":"/error"}
