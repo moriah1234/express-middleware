@@ -11,7 +11,7 @@ const browserMiddleware = require('./middlewares/browser-middleware')
 const trackUsersMiddleware = require('./middlewares/track-users-middleware')
 
 app.use('/', trackUsersMiddleware);
-// app.use('/', browserMiddleware);
+app.use('/', browserMiddleware);
 
 
 app.use('/signup', signUpRouter)
