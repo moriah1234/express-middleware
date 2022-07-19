@@ -6,7 +6,7 @@ const postMiddleware = require("../../ports-exercise/middle-ground/postMiddlewar
 
 const fs = require("fs");
 
-let jsonData = fs.readFileSync("/home/moriah/thursday-practice/express-middleware/ports-exercise/middle-ground/info.json");
+let jsonData = fs.readFileSync("../ports-exercise/middle-ground/info.json");
 
 router.get('/', getMiddleware, (req, res) => {
             jsonData = req.jsonData;
