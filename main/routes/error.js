@@ -1,4 +1,3 @@
-
 const express = require('express')
 const router = express.Router();
 
@@ -39,12 +38,19 @@ router.get('/', (req, res) => {
         color: #fff;
         font-size:3em;
     }
+    h2 {
+        color: #fff;
+        font-size:2.3em;
+
+    }
 
 </style>
 
 <body>
-<h1>You Are Not Allowed Here</h1>
-<h3>However you <strong>can</strong> make this page avialable to you...</h3>
+<h1>You Are Not Allowed Here</h1><br>
+<h3>However you <strong>can</strong> make this page avialable to you...</h3><br>    
+<h2>You have the power to comment just ONE line of code in index.js to fix that</h2>
+
 </body>`)
 })
 
