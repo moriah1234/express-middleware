@@ -10,7 +10,7 @@ const postMiddleware = require("../middle-ground/postMiddleware")
 
 const port = 8001;
 
-let jsonData = fs.readFileSync("/home/dina/thursday-practice/express-middleware/ports-exercise/middle-ground/info.json");
+let jsonData = fs.readFileSync("/home/tehilla/Thursday/express-middleware/ports-exercise/middle-ground/info.json");
 
 app.use(bodyParser.json());
 app.use(
