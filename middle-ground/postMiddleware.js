@@ -10,11 +10,11 @@ function postMiddleware(req, res, next) {
     obj.comment = comment;
     obj.port = port;
 
-    const jsonFile = fs.readFileSync("../ports-exercise/middle-ground/info.json");
+    const jsonFile = fs.readFileSync("../middle-ground/info.json");
     const parsed = JSON.parse(jsonFile);
     parsed.unshift(obj);
     const newInfo = JSON.stringify(parsed);
-    fs.writeFileSync("../ports-exercise/middle-ground/info.json", newInfo)
+    fs.writeFileSync("../middle-ground/info.json", newInfo)
 
     next();
 }

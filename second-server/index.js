@@ -5,12 +5,12 @@ const fs = require("fs");
 
 const bodyParser = require('body-parser');
 
-const getMiddleware = require("../ports-exercise/middle-ground/getMiddleware");
-const postMiddleware = require("../ports-exercise/middle-ground/postMiddleware")
+const getMiddleware = require("../middle-ground/getMiddleware");
+const postMiddleware = require("../middle-ground/postMiddleware")
 
 const port = 8001;
 
-let jsonData = fs.readFileSync("../ports-exercise/middle-ground/info.json");
+let jsonData = fs.readFileSync("../middle-ground/info.json");
 
 app.use(bodyParser.json());
 app.use(
