@@ -1,4 +1,2 @@
-/main/node_modules
-/main/package-lock.json
-/ports-exercise/second-server/node_modules
-/ports-exercise/second-server/package-lock.json
+/node_modules
+/package-lock.json
