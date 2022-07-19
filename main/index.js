@@ -3,11 +3,11 @@ const enterRouter = require('./routes/enter')
 const errorRouter = require('./routes/error')
 const bodyParser = require('body-parser');
 const homeRouter = require('./routes/home');
+const commentRouter = require('./routes/comment')
 const app = express();
 
 
 const port = 8000;
-const secondPort = 8080;
 
 app.use(bodyParser.json());
 app.use(
@@ -28,6 +28,7 @@ app.use(trackUsersMiddleware);
 app.use(languageMiddleware);
 app.use(homeRouter);
 
+app.use('/comment', commentRouter)
 app.use('/error', errorRouter)
 app.use('/enter', enterMiddleware, enterRouter)
 
