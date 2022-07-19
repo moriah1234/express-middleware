@@ -4,8 +4,7 @@ function enterMiddleware(req, res, next) {
     const obj = {};
 
     const userData = req.body;
-    console.log('userData: ', userData);
-    console.log(' isNaN(userData.age): ', isNaN(userData.age));
+    
     if (Object.keys(userData).length === 0) return next();
 
     if (userData.username?.length === 0) {
