@@ -14,17 +14,17 @@ let jsonData = fs.readFileSync("../middle-ground/info.json");
 
 app.use(bodyParser.json());
 app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
+    bodyParser.urlencoded({
+        extended: true,
+    })
 );
 
 app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/", getMiddleware, (req, res) => {
-  jsonData = req.jsonData;
-  res.send(`
+            jsonData = req.jsonData;
+            res.send(`
   <style>
   :root {
       --height: 40vh;

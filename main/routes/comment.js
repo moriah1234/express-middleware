@@ -9,8 +9,8 @@ const fs = require("fs");
 let jsonData = fs.readFileSync("../middle-ground/info.json");
 
 router.get('/', getMiddleware, (req, res) => {
-    jsonData = req.jsonData;
-    res.send(`
+            jsonData = req.jsonData;
+            res.send(`
 
     <style>
     :root {
