@@ -1,1 +1,27 @@
-[{"comment":"私はLです","port":"8000"}]
+[
+    {
+        "comment": "Robots are bad for us beacuse\n they are better than us!!!!!",
+        "port": "8000"
+    },
+    {
+        "comment": "hahaha iam a robot hahaha",
+        "port": "unknown"
+    },
+    {
+        "comment": "私はLです",
+        "port": "8000"
+    },
+    {
+        "comment": "They will take our jobs",
+        "port": "8000"
+    },
+    {
+        "comment": "ils prennent le controooooole",
+        "port": "8000"
+    },
+    {
+        "comment": "העולם שלנו הולך להעלם כפי שאנחנו מכירים אותו. הרובוטים ישנו את פני החברה; \n לרעה!!!! אנחנו נוחלף על ידי רובוטים ובסופו של דבר נגווע ברעב זרוקים ברחובות כאבן שאין לה הופכין. \n אנחנו, כחברה, צריכים להתקומם נגד המהפכה הקרבה ובאה. \n המהפכה שלמעשה כבר נמצאת כאן, ממש מתחת לאף של כולנו!!!!",
+        "port": "8000"
+    }
+
+]
