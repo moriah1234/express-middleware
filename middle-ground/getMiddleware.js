@@ -2,7 +2,7 @@ const fs = require('fs');
 
 function getMiddleware(req, res, next) {
 
-    const jsonFile = JSON.parse(fs.readFileSync("../ports-exercise/middle-ground/info.json"));
+    const jsonFile = JSON.parse(fs.readFileSync("../middle-ground/info.json"));
     req.jsonData = jsonFile;
 
 
