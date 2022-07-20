@@ -6,7 +6,6 @@ const homeRouter = require('./routes/home');
 const commentRouter = require('./routes/comment')
 const app = express();
 
-
 const port = 8000;
 
 app.use(bodyParser.json());
@@ -21,7 +20,7 @@ app.use(express.static('public'));
 
 const browserMiddleware = require('./middlewares/browser-middleware')
 
-// app.use(browserMiddleware);
+app.use(browserMiddleware);
 
 app.use(homeRouter);
 app.use('/comment', commentRouter)
