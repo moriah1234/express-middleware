@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router();
 
-const getMiddleware = require("../../ports-exercise/middle-ground/getMiddleware");
-const postMiddleware = require("../../ports-exercise/middle-ground/postMiddleware")
+const getMiddleware = require("../../middle-ground/getMiddleware");
+const postMiddleware = require("../../middle-ground/postMiddleware")
 
 const fs = require("fs");
 
