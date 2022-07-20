@@ -15,29 +15,20 @@ app.use(
         extended: true,
     })
 );
-
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
 
 const browserMiddleware = require('./middlewares/browser-middleware')
-const trackUsersMiddleware = require('./middlewares/track-users-middleware')
-const enterMiddleware = require('./middlewares/enter-middleware');
-const languageMiddleware = require('./middlewares/language-middleware');
-app.use(express.static('public'));
-// app.use('/', browserMiddleware);
-app.use(trackUsersMiddleware);
-app.use(languageMiddleware);
-app.use(homeRouter);
 
+// app.use(browserMiddleware);
+
+app.use(homeRouter);
 app.use('/comment', commentRouter)
 app.use('/error', errorRouter)
-app.use('/enter', enterMiddleware, enterRouter)
+app.use('/enter', enterRouter)
 
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
 })
-
-
-// app.listen(secondPort, () => {
-//     console.log(`App listening on port ${secondPort}`)
-// })

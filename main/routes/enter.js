@@ -3,23 +3,31 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     res.send(`<style>
+    :root {
+        --size: 90vh;
+        --cSize: 50vh;
+    }
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        color: #fff;
-        font-size: 20px;
-        font-family: cursive;
+        color: #000;
+        font-size: 25px;
+        /* font-family: 'Courier New', Courier, monospace;
+         */
+         font-family: 'Quattrocento Sans', sans-serif;
+        /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     }
 
     body {
-        background-color: black;
+        background-color: #fff;
         height: 100vh;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
+
     }
 
     ::-moz-selection {
@@ -32,167 +40,212 @@ router.get('/', (req, res) => {
         background: #fff;
     }
 
-    input[type=text] {
-        border: #fff solid .1vw;
-        background-color: #0000;
-        border-radius: 50vw;
-        height: 6vh;
-        width: 15vw;
-        text-align: center;
-        color: #fff;
+  
+
+    .container-wrapper-a {
+        height: var(--size) + 1.5vh;
+        width:  var(--size) + 1.5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: #bfbfbf 2px solid;
+        border-right-color: #333;
+        border-bottom-color: #333;
     }
 
-    input[type=text]:focus {
-        box-shadow: 0 0 15px 1px #fff;
+    .container-wrapper-b {
+        height: var(--size) + 1vh;
+        width: var(--size) + 1vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #bfbfbf;
+        border: #fff 2px solid;
+        border-right-color: #555;
+        border-bottom-color: #555;
+    }
+
+    .container {
+        background-color: #bfbfbf;
+        height:var(--size);
+        width:var(--size);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topbar {
+        background-image: linear-gradient(to right, #1c3070, #3b5490, #5b7ab0, #7fa1d0, #a7c9ef);
+        height: 8vh;
+        width:var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 3vw;
     }
 
     h1 {
-        font-size: 3em;
-        margin-bottom: -1.5vh;
-    }
-
-    input[type=submit] {
-        background-color: #0000;
-        border: #fff 1px solid;
         color: #fff;
-        border-radius: 50vh;
-        height: 5vh;
-        width: 10vw
+        font-size: 1.2em;
     }
 
-    input[type=submit]:hover {
-        background-color: #fff;
-        color: #000;
-        border-color: #000;
-        transition: .3s;
-    }
-
-    form {
-        width: 25vw;
-        height: 50vh;
-        display: flex;
+    .s-container {
+        height: 82vh;
+        width: var(--size);
+        /* display: flex;
         align-items: center;
         justify-content: space-evenly;
-        flex-direction: column;
-        border-radius: 3vw;
+        flex-direction: column; */
     }
 
-    div {
+    .info {
+        height: 32vh;
+        width: var(--size);
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    span {
-        margin-right: 1vw;
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: var(--size);
+        height: 50vh;
     }
 
-    h2 {
-        margin-top: -5vh;
+    input[type='text'] {
+        border: black solid 1.5px;
+        border-bottom-color: #bcbcbc;
+        border-right-color: #bcbcbc;
+        height: 6vh;
+        width: 17vw;
+    }
+
+    .input-wrapper {
+        border: #747171 solid 1.5px;
+        border-bottom-color: white;
+        border-right-color: white;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    input[type='submit'] {
+        width: 10vw;
+        height: 5.8vh;
+        display: flex;
+        background-color: #bfbfbf;
+        align-items: center;
+        justify-content: center;
+        border: solid #fff 2px;
+        border-bottom-color: #333;
+        border-right-color: #333;
+        cursor: pointer;
+    }
+
+    input[type='submit']:focus {
+        width: 10vw;
+        height: 5.8vh;
+        display: flex;
+        background-color: #bfbfbf;
+        align-items: center;
+        justify-content: center;
+        border: solid #333 2px;
+        border-bottom-color: #eee;
+        border-right-color: #eee;
+    }
+
+    .submit-wrapper {
+        width: 10.2vw;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        padding-bottom: .05vh;
+        padding-right: .05vh;
+
+    }
+
+    .f-close {
+        width: 5vh;
+        height: 5vh;
+        background-color: #bfbfbf;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        border: #fff solid 2px;
+        border-right-color: #747171;
+        border-bottom-color: #747171;
+        font-size: 1em;
+        text-align: center;
+        /* text-justify: ; */
+        /* vertical-align: middle; */
+        padding-bottom: .2vh;
+    }
+
+    .f-close-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5.2vh;
+        height: 5.2vh;
+        background-color: #333;
+        border: #bfbfbf solid 1px;
+        border-right-color: #333;
+        border-bottom-color: #333;
+        margin-left: 9vw;
     }
 </style>
 
 <body>
-<h1>The Anti Robot Movement</h1>
-<div>
-    <h2>We are here to protect humanity. <br /> Our future is in grave danger! <br /> Say no to robots today to
-        protect tommorow.</h2>
-    <form action="/enter" method="POST">
-        <input type="text" placeholder="username" name="username" />
-        <input type="text" placeholder="password" name="password" />
-        <input type="text" placeholder="age" name="age" />
-        <input type="submit" value="Enter" />
-    </form>
+<img src="./wallpaper.jpg" />
+<div class="container-wrapper-a">
+    <div class="container-wrapper-b">
+        <div class="container">
+            <div class="topbar">
+                <h1>The Anti Robot Movement</h1>
+                <div class="f-close-wrapper">
+                    <div class="f-close">x</div>
+                </div>
+            </div>
+            <div class="s-container">
+                <div class="info">
+                    <h2>We are here to protect humanity. <br />
+                        Our future is in grave danger! <br />
+                        Say no to robots today to protect tommorow.</h2>
+                </div>
+                <form action="/enter" method="POST">
+                    <div class='input-wrapper'>
+                        <input type="text" placeholder="username" name="username" />
+                    </div>
+                    <div class='input-wrapper'>
+                        <input type="text" placeholder="password" name="password" />
+                    </div>
+                    <p>jijoinjtf5fvj</p>
+                    <div class='input-wrapper'>
+                        <input type="text" placeholder="prove your unrobotness" name="age" />
+                    </div>
+                    <div class="submit-wrapper">
+                        <input type="submit" value="Enter" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 </body>`)
-})
+});
 
 router.post('/', (req, res) => {
-    console.log('req: ', req.body);
-    console.log('jdidbvcudbcdcvfcfr');
-    res.send(`
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-            font-size: 20px;
-            font-family: cursive;
-        }
-
-        body {
-            background-color: black;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-direction: column;
-        }
-
-        ::-moz-selection {
-            color: #000;
-            background: #fff;
-        }
-
-        ::selection {
-            color: #000;
-            background: #fff;
-        }
-
-        form {
-            width: 25vw;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-direction: column;
-            border-radius: 3vw;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: -1.5vh;
-        }
-
-        input[type=submit] {
-            background-color: #0000;
-            border: #fff 1px solid;
-            color: #fff;
-            border-radius: 50vh;
-            height: 5vh;
-            width: 10vw
-        }
-
-        input[type=submit]:hover {
-            background-color: #fff;
-            color: #000;
-            border-color: #000;
-            transition: .3s;
-        }
-        textarea {
-            border: #fff solid .1vw;
-            background-color: #0000;
-            height: 20vh;
-            width: 20vw;
-            text-align: center;
-            color: #fff;
-        }
-
-        textarea:focus {
-            box-shadow: 0 0 15px 1px #fff;
-        }
-
-    </style>
-    
-    <body>
-    <h1>You have proven yourself a true human!</h1>
-    <h2>Share your knowladge with all of us!</h2>
-    <form action="/comments" method="post">
-        <textarea placeholder="write here!"></textarea>
-        <input type="submit" value="share" />
-    </form>
-</body>`)
+    res.redirect('/')
 })
 module.exports = router;
