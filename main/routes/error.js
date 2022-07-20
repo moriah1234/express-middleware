@@ -183,6 +183,7 @@ router.get('/', (req, res) => {
         font-size: 1.5em;
         margin-bottom: 1vh;
     }
+    
 </style>
 
 <body>

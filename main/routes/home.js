@@ -5,8 +5,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.send(`<style>
     :root {
-        --size: 90vh;
-        --cSize: 50vh;
+        --height: 40vh;
+        --width: 40vw;
     }
     * {
         box-sizing: border-box;
@@ -14,10 +14,7 @@ router.get('/', (req, res) => {
         padding: 0;
         color: #000;
         font-size: 25px;
-        /* font-family: 'Courier New', Courier, monospace;
-         */
-         font-family: 'Quattrocento Sans', sans-serif;
-        /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+        font-family: 'Courier New', Courier, monospace;
     }
 
     body {
@@ -41,11 +38,9 @@ router.get('/', (req, res) => {
         background: #fff;
     }
 
-  
-
     .container-wrapper-a {
-        height: var(--size) + 1.5vh;
-        width:  var(--size) + 1.5vh;
+        height: var(--height) + 1.5vh;
+        width:  var(--width) + 1.5vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -55,8 +50,8 @@ router.get('/', (req, res) => {
     }
 
     .container-wrapper-b {
-        height: var(--size) + 1vh;
-        width: var(--size) + 1vh;
+        height: var(--height) + 1vh;
+        width: var(--width) + 1vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -68,8 +63,8 @@ router.get('/', (req, res) => {
 
     .container {
         background-color: #bfbfbf;
-        height:var(--size);
-        width:var(--size);
+        height:var(--height);
+        width:var(--width);
         display: flex;
         flex-direction: column;
     }
@@ -77,56 +72,34 @@ router.get('/', (req, res) => {
     .topbar {
         background-image: linear-gradient(to right, #1c3070, #3b5490, #5b7ab0, #7fa1d0, #a7c9ef);
         height: 8vh;
-        width:var(--size);
+        width:var(--width);
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        padding-left: 3vw;
+        justify-content: space-between;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 
     h1 {
-        color: #fff;
+        color: #bfbfbf;
         font-size: 1.2em;
+        text-shadow: 1px 1px #000;
+
     }
 
     .s-container {
         height: 82vh;
-        width: var(--size);
-        /* display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column; */
+        width: var(--width);
     }
 
     .info {
         height: 32vh;
-        width: var(--size);
+        width: var(--width);
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    form {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
         flex-direction: column;
-        width: var(--size);
-        height: 50vh;
-    }
-
-    input[type='text'] {
-        border: black solid 1.5px;
-        border-bottom-color: #bcbcbc;
-        border-right-color: #bcbcbc;
-        height: 6vh;
-        width: 17vw;
-    }
-
-    .input-wrapper {
-        border: #747171 solid 1.5px;
-        border-bottom-color: white;
-        border-right-color: white;
+        padding-left: 1vw;
     }
 
     img {
@@ -176,8 +149,8 @@ router.get('/', (req, res) => {
     }
 
     .f-close {
-        width: 5vh;
-        height: 5vh;
+        width: 3vh;
+        height: 3vh;
         background-color: #bfbfbf;
         display: flex;
         align-items: center;
@@ -197,51 +170,42 @@ router.get('/', (req, res) => {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 5.2vh;
-        height: 5.2vh;
+        width: 3.2vh;
+        height: 3.2vh;
         background-color: #333;
         border: #bfbfbf solid 1px;
         border-right-color: #333;
         border-bottom-color: #333;
-        margin-left: 9vw;
+        margin-left: 10vw;
+    }
+
+    .text-bold {
+        color: #00f;
+        font-size: 1.5em;
+        margin-bottom: 1vh;
     }
 </style>
 
 <body>
-<img src="./wallpaper.jpg" />
+ 
+<img src="/wallpaper.jpg" />
 <div class="container-wrapper-a">
-    <div class="container-wrapper-b">
-        <div class="container">
-            <div class="topbar">
-                <h1>The Anti Robot Movement</h1>
-                <div class="f-close-wrapper">
-                    <div class="f-close">x</div>
-                </div>
+<div class="container-wrapper-b">
+    <div class="container">
+        <div class="topbar">
+            <h1>New Message</h1>
+            <div class="f-close-wrapper">
+                <div class="f-close">x</div>
             </div>
-            <div class="s-container">
-                <div class="info">
-                    <h2>We are here to protect humanity. <br />
-                        Our future is in grave danger! <br />
-                        Say no to robots today to protect tommorow.</h2>
-                </div>
-                <form action="/enter" method="POST">
-                    <div class='input-wrapper'>
-                        <input type="text" placeholder="username" name="username" />
-                    </div>
-                    <div class='input-wrapper'>
-                        <input type="text" placeholder="password" name="password" />
-                    </div>
-                    <p>jijoinjtf5fvj</p>
-                    <div class='input-wrapper'>
-                        <input type="text" placeholder="prove your unrobotness" name="age" />
-                    </div>
-                    <div class="submit-wrapper">
-                        <input type="submit" value="Enter" />
-                    </div>
-                </form>
+        </div>
+        <div class="s-container">
+            <div class="info">
+                <h2 class="text-bold">You are in. </h2>
+                   <h2> Your next mission will arive soon...</h2>
             </div>
         </div>
     </div>
+</div>
 </div>
 </body>`)
 })

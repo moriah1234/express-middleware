@@ -28,6 +28,17 @@ function enterMiddleware(req, res, next) {
         if (obj.age && obj.password && obj.username) return next();
 
         else res.redirect("/error/ofdata")
+
+        // const obj = {};
+
+        // const userData = req.body;
+
+        // if (Object.keys(userData).length === 0) return next();
+
+        // if (userData.username?.length === 0) {
+        //     obj.username = false
+        // } else {
+        //     obj.username = true
     }
     else {
         next()
