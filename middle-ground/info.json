@@ -1,82 +1,38 @@
 [
     {
-        "comment": "hAHHahhahahaha",
+        "comment": "<p style=\"background: #f00; width: 50vw; height: 30vh; padding-left: 10vw;\">I am not a robot, I promise</p>",
+        "port": "8000"
+    },
+    {
+        "comment": "im a human",
         "port": "8001"
     },
     {
-        "comment": "oho no i am uncertificated",
+        "comment": "העולם שלנו הולך להעלם כפי שאנחנו מכירים אותו. הרובוטים ישנו את פני החברה; \n לרעה!!!! אנחנו נוחלף על ידי רובוטים ובסופו של דבר נגווע ברעב זרוקים ברחובות כאבן שאין לה הופכין. \n אנחנו, כחברה, צריכים להתקומם נגד המהפכה הקרבה ובאה. \n המהפכה שלמעשה כבר נמצאת כאן, ממש מתחת לאף של כולנו!!!!",
+        "port": "8000"
+    },
+    {
+        "comment": "Robots are bad for us beacuse\n they are better than us!!!!!",
+        "port": "8000"
+    },
+    {
+        "comment": "hahaha iam a robot hahaha",
+        "port": "unknown"
+    },
+    {
+        "comment": "ils prennent le controooooole",
+        "port": "8000"
+    },
+    {
+        "comment": "私はLです",
+        "port": "8000"
+    },
+    {
+        "comment": "They will take our jobs",
+        "port": "8000"
+    },
+    {
+        "comment": "omoshiroi",
         "port": "8001"
-    },
-    {
-        "comment": "nckcnkjxz",
-        "port": "8001"
-    },
-    {
-        "comment": "cmlkdsmclkdsmclkdsm",
-        "port": "8000"
-    },
-    {
-        "comment": "hahahahahhahahaah",
-        "port": "8000"
-    },
-    {
-        "comment": "amaizingodeska",
-        "port": "8000"
-    },
-    {
-        "comment": "watashi wa el des",
-        "port": "8000"
-    },
-    {
-        "comment": "hello its me",
-        "port": "8000"
-    },
-    {
-        "comment": "nkjdsnckjdsnckjdsnckjdsnckjndsckjndskjcnkjdsnckjdsnckjdsnckjndsckjndskjcndskjcnkjdsnckjdsnckjdsnckjndsjknckjdsnckjdsnckjdsnkjcndskjnckjdsnckjdsnckjndsckjsnckjdsnckjdsnckjdsnckjdsn",
-        "port": "8000"
-    },
-    {
-        "comment": "dsnckjnskjck",
-        "port": "8000"
-    },
-    {
-        "comment": "mkmklmcsa cmlksmcklds",
-        "port": "8000"
-    },
-    {
-        "comment": "fkfkldsjfkdsjf lkjf lkdsjflk sflkjds fkdsjfk dsjflk dsjfkds kfjds fkjds \ndfhkjdshfjds hfkjds hfkjds hfkjdshf\n dshfkjdshfkjdshk",
-        "port": "8000"
-    },
-    {
-        "comment": "deden",
-        "port": "8000"
-    },
-    {
-        "comment": "wswswswsws",
-        "port": "8001"
-    },
-    {
-        "comment": "bbbbbbbbbbbbb",
-        "port": "8000"
-    },
-    {
-        "comment": "12hbhbh",
-        "port": "8001"
-    },
-    {
-        "comment": "12345",
-        "port": "8000"
-    },
-    {
-        "comment": "hello",
-        "port": "8000"
-    },
-    {
-        "comment": "SDFGJK",
-        "port": "8000"
-    },
-    {
-        "comment": "jjijojiojojjijjoj \n fjiodjoif\nkdjfdfkdjf\nkfdjflksjdfklsdjflkjflkdsjlkfjdslfjk",
-        "port": "mkmkm"
     }
 ]
