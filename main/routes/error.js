@@ -202,7 +202,7 @@ router.get('/', (req, res) => {
             <div class="info">
                 <h2 class="text-bold">You are not allowed here. </h2>
                    <h2> However, you can make this page available to you! <br />
-                    You have the power to comment just one line to fix that.</h2>
+                    You have the power to comment just one line in main/index.js to fix that.</h2>
             </div>
         </div>
     </div>
