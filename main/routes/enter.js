@@ -1,7 +1,17 @@
 const express = require('express')
 const router = express.Router();
 
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#$%^&*!@()';
+const randomString = () => {
+    let result = ""
+    for (let i = 0; i < 7; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+}
+
 router.get('/', (req, res) => {
+
     res.send(`<style>
     :root {
         --size: 90vh;
@@ -230,9 +240,12 @@ router.get('/', (req, res) => {
                     <div class='input-wrapper'>
                         <input type="text" placeholder="password" name="password" />
                     </div>
-                    <p>jijoinjtf5fvj</p>
+                    <p>captcha:</p>
                     <div class='input-wrapper'>
-                        <input type="text" placeholder="prove your unrobotness" name="age" />
+                    <input value=${randomString()} name="captchaval" disabled/>
+                    </div>
+                    <div class='input-wrapper'>
+                        <input type="text" placeholder="prove unrobotness" name="capcha" />
                     </div>
                     <div class="submit-wrapper">
                         <input type="submit" value="Enter" />
