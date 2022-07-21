@@ -1,2 +1,3 @@
-{"timeStamp":"2022-07-20T14:36:40.754Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36","remoteIp":"::1","url":"/"}
-{"timeStamp":"2022-07-20T14:36:41.206Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36","remoteIp":"::1","url":"/favicon.ico"}
+{"timeStamp":"2022-07-21T06:22:55.286Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36","remoteIp":"::1","url":"/error"}
+{"timeStamp":"2022-07-21T06:23:00.579Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36","remoteIp":"::1","url":"/"}
+{"timeStamp":"2022-07-21T06:23:08.500Z","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36","remoteIp":"::1","url":"/"}
