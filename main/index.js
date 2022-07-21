@@ -21,7 +21,6 @@ app.use(express.static('public'));
 const browserMiddleware = require('./middlewares/browser-middleware')
 
 app.use(browserMiddleware);
-
 app.use(homeRouter);
 app.use('/comment', commentRouter)
 app.use('/error', errorRouter)
