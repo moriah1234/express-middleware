@@ -40,7 +40,7 @@ app.get("/", getMiddleware, (req, res) => {
   }
 
   body {
-      background-color: #f00;
+      background-color:  #652f30;
       height: 100vh;
       width: 100vw;
       display: flex;
