@@ -408,7 +408,7 @@ router.get('/ofdata', (req, res) => {
         <div class="topbar">
             <h1>Critical Error</h1>
             <div class="f-close-wrapper">
-                <div class="f-close">x</div>
+                <div class="f-close"><a href="/enter">x</a></div>
             </div>
         </div>
         <div class="s-container">

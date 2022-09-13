@@ -16,13 +16,13 @@ app.use(
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-
+const enterMiddleware = require('./middlewares/enter-middleware')
 const browserMiddleware = require('./middlewares/browser-middleware')
 
 // app.use(browserMiddleware);
 app.use(homeRouter);
 app.use('/error', errorRouter)
-app.use('/enter', enterRouter)
+app.use('/enter', enterMiddleware,enterRouter)
 
 
 app.listen(port, () => {

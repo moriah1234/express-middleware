@@ -263,7 +263,7 @@ router.get('/', (req, res) => {
                     <div class="info">
                         <h2 class="text-bold">Welcome </h2>
                         <h2>There is a mission waiting for you...</h2>
-                        <h3>when you are done pres this button =></h3><a href='/enter'><button >enternce</button></a>
+                        <h3>when you are done press this button =></h3><a href='/enter'><button >enternce</button></a>
                     </div>
                 </div>
             </div>
@@ -300,7 +300,7 @@ router.get('/', (req, res) => {
             <div class="topbar">
                 <h1>New Message</h1>
                 <div class="f-close-wrapper">
-                    <div class="f-close">x</div>
+                    <div class="f-close"><a href="/enter">x</a></div>
                 </div>
             </div>
             <div class="s-container">
