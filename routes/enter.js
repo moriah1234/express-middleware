@@ -232,9 +232,15 @@ router.get('/', (req, res) => {
                     </div>
                     <p>captcha:</p>
                     <div class='input-wrapper'>
-                        <span style="text-align:center;cursor:default">${randomString()}</span>
-                        <input type="hidden" style="text-align:center;cursor:default" value=${randomString()}
-                            name="captchaval"></input>
+                        <span style="text-align:center;cursor:default">
+                            ${randomString()}
+                        </span>
+                        <input 
+                            type="hidden" 
+                            style="text-align:center;cursor:default" 
+                            value=${randomString()}
+                            name="captchaval"
+                        ></input>
                     </div>
                     <div class='input-wrapper'>
                         <input type="text" placeholder="prove unrobotness" name="capcha" />

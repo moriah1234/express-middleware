@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.send(`   <style>
     :root {
-        --height: 40vh;
+        --height: 45vh;
         --width: 40vw;
     }
     * {
@@ -181,6 +181,10 @@ router.get('/', (req, res) => {
         font-size: 1.5em;
         margin-bottom: 1vh;
     }
+    .back-button{
+        align-self: center;
+        padding-bottom: 3vh;
+    }
     
 </style>
 
@@ -200,9 +204,12 @@ router.get('/', (req, res) => {
             <div class="info">
                 <h2 class="text-bold">You are not allowed here. </h2>
                    <h2> However, you can make this page available to you! <br />
-                    You have the power to comment just one line in main/index.js to fix that.</h2>
+                    You have the power to comment just one line in index.js to fix that.</h2>
             </div>
         </div>
+        <a 
+        class="back-button"
+        href="/">try again</a>
     </div>
 </div>
 </div>
