@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
         margin: 0;
         padding: 0;
         color: #000;
-        font-size: 25px;
+        font-size: 20px;
         font-family: 'Courier New', Courier, monospace;
     }
 
@@ -160,8 +160,6 @@ router.get('/', (req, res) => {
         border-bottom-color: #747171;
         font-size: 1em;
         text-align: center;
-        /* text-justify: ; */
-        /* vertical-align: middle; */
         padding-bottom: .2vh;
     }
 

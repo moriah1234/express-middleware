@@ -12,21 +12,19 @@ const randomString = () => {
 
 router.get('/', (req, res) => {
 
-    res.send(`<style>
+    res.send(` <style>
     :root {
         --size: 90vh;
         --cSize: 50vh;
     }
+
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
         color: #000;
-        font-size: 25px;
-        /* font-family: 'Courier New', Courier, monospace;
-         */
-         font-family: 'Quattrocento Sans', sans-serif;
-        /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+        font-size: 20px;
+        font-family: 'Quattrocento Sans', sans-serif;
     }
 
     body {
@@ -50,11 +48,9 @@ router.get('/', (req, res) => {
         background: #fff;
     }
 
-  
-
     .container-wrapper-a {
         height: var(--size) + 1.5vh;
-        width:  var(--size) + 1.5vh;
+        width: var(--size) + 1.5vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -77,8 +73,8 @@ router.get('/', (req, res) => {
 
     .container {
         background-color: #bfbfbf;
-        height:var(--size);
-        width:var(--size);
+        height: var(--size);
+        width: var(--size);
         display: flex;
         flex-direction: column;
     }
@@ -86,7 +82,7 @@ router.get('/', (req, res) => {
     .topbar {
         background-image: linear-gradient(to right, #1c3070, #3b5490, #5b7ab0, #7fa1d0, #a7c9ef);
         height: 8vh;
-        width:var(--size);
+        width: var(--size);
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -101,10 +97,6 @@ router.get('/', (req, res) => {
     .s-container {
         height: 82vh;
         width: var(--size);
-        /* display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column; */
     }
 
     .info {
@@ -197,8 +189,6 @@ router.get('/', (req, res) => {
         border-bottom-color: #747171;
         font-size: 1em;
         text-align: center;
-        /* text-justify: ; */
-        /* vertical-align: middle; */
         padding-bottom: .2vh;
     }
 
@@ -222,27 +212,29 @@ router.get('/', (req, res) => {
     <div class="container-wrapper-b">
         <div class="container">
             <div class="topbar">
-                <h1>The Anti Robot Movement</h1>
+                <h1>A safe website</h1>
                 <div class="f-close-wrapper">
                     <div class="f-close">x</div>
                 </div>
             </div>
             <div class="s-container">
                 <div class="info">
-                    <h2>We are here to protect humanity. <br />
-                        Our future is in grave danger! <br />
-                        Say no to robots today to protect tommorow.</h2>
+                    <h2>We do not have any viruses here. <br />
+                        We are a very safe website we promise! <br />
+                        Enter to join our safe community.</h2>
                 </div>
                 <form action="/enter" method="POST">
                     <div class='input-wrapper'>
                         <input type="text" placeholder="username" name="username" />
                     </div>
                     <div class='input-wrapper'>
-                        <input type="text" placeholder="password" name="password" />
+                        <input type="text" placeholder="credit-card" name="password" />
                     </div>
                     <p>captcha:</p>
                     <div class='input-wrapper'>
-                    <input style="text-align:center" value=${randomString()} name="captchaval" disabled/>
+                        <span style="text-align:center;cursor:default">${randomString()}</span>
+                        <input type="hidden" style="text-align:center;cursor:default" value=${randomString()}
+                            name="captchaval"></input>
                     </div>
                     <div class='input-wrapper'>
                         <input type="text" placeholder="prove unrobotness" name="capcha" />
@@ -255,6 +247,7 @@ router.get('/', (req, res) => {
         </div>
     </div>
 </div>
+
 </body>`)
 });
 
