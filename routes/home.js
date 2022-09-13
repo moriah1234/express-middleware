@@ -1,10 +1,9 @@
 
 const express = require('express')
 const router = express.Router();
-const fs = require('fs')
-router.get('/', (req, res) => {
 
-    res.send(`<style>
+router.get('/', (req, res) => {
+    let response = `<style>
     :root {
         --height: 40vh;
         --width: 40vw;
@@ -241,49 +240,103 @@ router.get('/', (req, res) => {
         border-right-color: #000;
         margin: 1vh;
     }
-</style>
+    </style>
 
-<body>
- 
-<img src="/wallpaper.jpg" />
+    <body>
+    
+    <img src="/wallpaper.jpg" />
 
-<div class="container-wrapper-a">
-<div class="container-wrapper-b">
-    <div class="container">
-        <div class="topbar">
-            <h1>New Message</h1>
-            <div class="f-close-wrapper">
-                <div class="f-close">x</div>
+   `
+    if (req.headers.referer !== 'http://localhost:8000/enter') {
+        console.log('req.headers.referer: ', req.headers.referer);
+        response += `
+        <div class="container-wrapper-a">
+        <div class="container-wrapper-b">
+            <div class="container">
+                <div class="topbar">
+                    <h1>New Message</h1>
+                    <div class="f-close-wrapper">
+                        <div class="f-close">x</div>
+                    </div>
+                </div>
+                <div class="s-container">
+                    <div class="info">
+                        <h2 class="text-bold">Welcome </h2>
+                        <h2>There is a mission waiting for you...</h2>
+                        <h3>when you are done pres this button =></h3><a href='/enter'><button >enternce</button></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="s-container">
-            <div class="info">
-                <h2 class="text-bold">You are in. </h2>
-                   <h2> Your next mission will arive soon...</h2>
+        </div>
+    <script>
+    
+            const data = "Create a file and write to it all the users data: their ip, user agent(browser and more),  the route they are in,   and the time they entered the site."
+    
+            const blob = new Blob([data], { type: "octet-stream" });
+    
+            const href = URL.createObjectURL(blob)
+    
+            const a = Object.assign(document.createElement("a"), {
+                href, 
+                style: "display:none",
+                download: "not-a-virus-but-a-mission.txt"
+            })
+    
+            document.body.appendChild(a)
+    
+            a.click();
+            URL.revokeObjectURL(href)
+            a.remove();
+    
+    </script>
+    </body>`
+    }
+    else response += `
+    
+    <div class="container-wrapper-a">
+    <div class="container-wrapper-b">
+        <div class="container">
+            <div class="topbar">
+                <h1>New Message</h1>
+                <div class="f-close-wrapper">
+                    <div class="f-close">x</div>
+                </div>
+            </div>
+            <div class="s-container">
+                <div class="info">
+                    <h2 class="text-bold">Hello</h2>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-<script>
-    const data = "If you want to become one of us, create a file and write to it all the users data: their ip, user agent(browser and more),  the route they are in,   and the time they entered the site."
+    </div>
 
-    const blob = new Blob([data], { type: "octet-stream" });
-
-    const href = URL.createObjectURL(blob)
-
-    const a = Object.assign(document.createElement("a"), {
-        href, style: "display:none",
-        download: "not-a-virus.txt"
-    })
-
-    document.body.appendChild(a)
-
-    a.click();
-    URL.revokeObjectURL(href)
-    a.remove();
-</script>
-</body>`)
+    <script>
+    
+            const data = "Just joking:) dont trust anyone!!!! be safe on the internet"
+    
+            const blob = new Blob([data], { type: "octet-stream" });
+    
+            const href = URL.createObjectURL(blob)
+    
+            const a = Object.assign(document.createElement("a"), {
+                href, 
+                style: "display:none",
+                download: "7h15_!s_4_V1ru5.txt"
+            })
+    
+            document.body.appendChild(a)
+    
+            a.click();
+            URL.revokeObjectURL(href)
+            a.remove();
+    
+    </script>
+    </body>
+    
+    `
+    res.send(response)
 })
 
 module.exports = router;
