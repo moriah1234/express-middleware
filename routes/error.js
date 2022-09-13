@@ -369,8 +369,6 @@ router.get('/ofdata', (req, res) => {
         border-bottom-color: #747171;
         font-size: 1em;
         text-align: center;
-        /* text-justify: ; */
-        /* vertical-align: middle; */
         padding-bottom: .2vh;
     }
 

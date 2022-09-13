@@ -253,5 +253,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     res.redirect('/')
-})
+});
+
 module.exports = router;

@@ -271,7 +271,7 @@ router.get('/', (req, res) => {
         </div>
     <script>
     
-            const data = "Create a file and write to it all the users data: their ip, user agent(browser and more),  the route they are in,   and the time they entered the site."
+            const data = "log all of the users data: their ip, user agent(browser and more),  the route they are in,   and the time they entered the site, using middleware ofcourse"
     
             const blob = new Blob([data], { type: "octet-stream" });
     
