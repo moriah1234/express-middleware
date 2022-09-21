@@ -330,9 +330,6 @@ router.get('/', (req, res) => {
         </div>
     </div>
     </div>
-    <script>
-    alert("תן לי גישה למחשב שלך")
-    </script>
     </body>
     
     `

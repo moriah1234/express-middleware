@@ -202,7 +202,7 @@ router.get('/', (req, res) => {
         border: #bfbfbf solid 1px;
         border-right-color: #333;
         border-bottom-color: #333;
-        margin-left: 17vw;
+        margin-left: 18vw;
     }
 </style>
 
