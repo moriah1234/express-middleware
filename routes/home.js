@@ -240,6 +240,48 @@ router.get('/', (req, res) => {
         border-right-color: #000;
         margin: 1vh;
     }
+
+    .submit-wrapper {
+        width: 10.2vw;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        padding-bottom: .05vh;
+        padding-right: .05vh;
+        margin-top: 1vh;
+    }
+
+    .button {
+        width: 10vw;
+        height: 5.8vh;
+        display: flex;
+        background-color: #bfbfbf;
+        align-items: center;
+        justify-content: center;
+        border: solid #fff 2px;
+        border-bottom-color: #333;
+        border-right-color: #333;
+        cursor: pointer;
+        
+    }
+
+    .button:focus {
+        width: 10vw;
+        height: 5.8vh;
+        display: flex;
+        background-color: #bfbfbf;
+        align-items: center;
+        justify-content: center;
+        border: solid #333 2px;
+        border-bottom-color: #eee;
+        border-right-color: #eee;
+    }
+
+    a {
+        text-decoration: none;
+    }
     </style>
 
     <body>
@@ -248,7 +290,6 @@ router.get('/', (req, res) => {
 
    `
     if (req.headers.referer !== 'http://localhost:8000/enter') {
-        console.log('req.headers.referer: ', req.headers.referer);
         response += `
         <div class="container-wrapper-a">
         <div class="container-wrapper-b">
@@ -261,35 +302,13 @@ router.get('/', (req, res) => {
                 </div>
                 <div class="s-container">
                     <div class="info">
-                        <h2 class="text-bold">Welcome </h2>
-                        <h2>There is a mission waiting for you...</h2>
-                        <h3>when you are done press this button =></h3><a href='/enter'><button >enternce</button></a>
+                        <p>Log all of the users data: their ip, user agent(browser and more),  the route they are in,   and the time they entered the site</p>
+                        <a href='/enter' class='submit-wrapper'><button class="button" >entrance</button></a>
                     </div>
                 </div>
             </div>
         </div>
         </div>
-    <script>
-    
-            const data = "log all of the users data: their ip, user agent(browser and more),  the route they are in,   and the time they entered the site, using middleware ofcourse"
-    
-            const blob = new Blob([data], { type: "octet-stream" });
-    
-            const href = URL.createObjectURL(blob)
-    
-            const a = Object.assign(document.createElement("a"), {
-                href, 
-                style: "display:none",
-                download: "not-a-virus-but-a-mission.txt"
-            })
-    
-            document.body.appendChild(a)
-    
-            a.click();
-            URL.revokeObjectURL(href)
-            a.remove();
-    
-    </script>
     </body>`
     }
     else response += `
@@ -311,27 +330,8 @@ router.get('/', (req, res) => {
         </div>
     </div>
     </div>
-
     <script>
-    
-            const data = "Just joking:) dont trust anyone!!!! be safe on the internet"
-    
-            const blob = new Blob([data], { type: "octet-stream" });
-    
-            const href = URL.createObjectURL(blob)
-    
-            const a = Object.assign(document.createElement("a"), {
-                href, 
-                style: "display:none",
-                download: "7h15_!s_4_V1ru5.txt"
-            })
-    
-            document.body.appendChild(a)
-    
-            a.click();
-            URL.revokeObjectURL(href)
-            a.remove();
-    
+    alert("תן לי גישה למחשב שלך")
     </script>
     </body>
     

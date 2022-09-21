@@ -202,7 +202,7 @@ router.get('/', (req, res) => {
         border: #bfbfbf solid 1px;
         border-right-color: #333;
         border-bottom-color: #333;
-        margin-left: 9vw;
+        margin-left: 17vw;
     }
 </style>
 
@@ -219,16 +219,16 @@ router.get('/', (req, res) => {
             </div>
             <div class="s-container">
                 <div class="info">
-                    <h2>We do not have any viruses here. <br />
-                        We are a very safe website we promise! <br />
-                        Enter to join our safe community.</h2>
+                    <h2>We are a very usefull website we promise! <br />
+                    And we even do not have any viruses here.<br />
+                        Enter to join our fascinating community.</h2>
                 </div>
                 <form action="/enter" method="POST">
                     <div class='input-wrapper'>
                         <input type="text" placeholder="username" name="username" />
                     </div>
                     <div class='input-wrapper'>
-                        <input type="text" placeholder="credit-card" name="password" />
+                        <input type="text" placeholder="password" name="password" />
                     </div>
                     <p>captcha:</p>
                     <div class='input-wrapper'>
@@ -243,7 +243,7 @@ router.get('/', (req, res) => {
                         ></input>
                     </div>
                     <div class='input-wrapper'>
-                        <input type="text" placeholder="prove unrobotness" name="capcha" />
+                        <input type="text" placeholder="captcha" name="captcha" />
                     </div>
                     <div class="submit-wrapper">
                         <input type="submit" value="Enter" />
