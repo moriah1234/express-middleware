@@ -1,11 +1,8 @@
 const express = require('express')
 const router = express.Router();
-
+const path = require('path')
 router.get('/', (req, res) => {
-    res.send(` 
-        <title>Error</title>
-        <p> Error 405: Not Allowed </p>
-        `)
+    res.sendFile(path.join(__dirname, "../pages/error.html"))
 });
 
 module.exports = router;

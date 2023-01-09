@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 20px;
+    font-family: "Space Mono", monospace;
+}
+
+::-moz-selection {
+    color: #000;
+    background: #fff;
+}
+
+::selection {
+    color: #000;
+    background: #fff;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.container-wrapper {
+    border: #bfbfbf solid 1.5px;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    flex-direction: column;
+    height: 50vh;
+    width: 50vh;
+    background-color: #bfbfbf;
+    border: #f5f4f4 2px solid;
+    border-right-color: #747171;
+    border-bottom-color: #747171;
+}
+
+input:not([type="submit"]) {
+    padding-left: 1vw;
+    border: #000000 solid 1.5px;
+    border-bottom-color: #9c9a9a;
+    border-right-color: #9c9a9a;
+    height: 6vh;
+    width: 17vw;
+}
+
+.input-wrapper {
+    border: #747171 solid 1.5px;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+}
+
+input[type="submit"] {
+    width: 10vw;
+    height: 6vh;
+    background-color: #bfbfbf;
+    border: solid #fff 2px;
+    border-bottom-color: #444;
+    border-right-color: #444;
+    cursor: pointer;
+    box-shadow: 1px 1px #000, -1px -1px #000;
+}
+
+.topbar {
+    background-image: linear-gradient(to left, #1c3070, #3b5490, #5b7ab0, #7fa1d0, #a7c9ef);
+    position: absolute;
+    top: 0;
+    width: 49vh;
+    display: grid;
+    grid-template-columns:5fr 1fr 1fr ;
+    grid-template-rows:  1fr;
+    padding: 0.2vw 0.5vw;
+    gap: .1vw
+}
+
+.error {
+    background-image: linear-gradient(to right, #e18c96, #c46a70, #a64a4b, #862a28, #660303); 
+}
+.button {
+    background-color: #bfbfbf;
+    color: #666;
+    border: #fff solid 2px;
+    border-right-color: #747171;
+    border-bottom-color: #747171;
+    text-align: center;
+    justify-self: flex-end;
+    box-shadow: 1px 1px #000, -1px -1px #000;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 43vh;
+    position: absolute;
+    bottom: 0;
+}
+
+p {
+    text-align: center;
+    text-shadow: 1px 1px #fff, 1px 1px #fff;
+}
+
+.title {
+    grid-column: 1 / 2;
+}
+
+.x {
+    grid-column: 3 / 4;
+}
+
+.q {
+    grid-column: 2 / 3;
+}
+
+#warning {
+    margin-top: 3vh;
+    font-size: 6rem;
+    color: red;
+}

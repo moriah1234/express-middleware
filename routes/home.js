@@ -1,22 +1,13 @@
 
-const express = require('express')
+const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 router.get('/', (req, res) => {
-    res.send(`
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <p>Log all of the user data: </p>
-        <ul>
-            <li>Ip</li>
-            <li>User agent</li>
-            <li>Current route in website</li>
-            <li>Entrance Time</li>
-        </ul>
-    </body>
-    `)
+    res.sendFile(path.join(__dirname, "../pages/home.html"))
 })
 
+// router.get('/:status', (req, res) => {
+//     res.sendFile(path.join(__dirname, "../pages/home.html"))
+// })
 module.exports = router;

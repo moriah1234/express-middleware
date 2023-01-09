@@ -1,30 +1,19 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 router.get('/', (req, res) => {
-    res.send(` 
-    <head>
-    <title>Entrance</title>
-    <link rel='stylesheet' href='/stylesheet/enter.css' />
-    </head>
-    <body className="enter-body">
-        <form action="/enter" method="POST">
-            <div class='input-wrapper'>
-                <input type="text" placeholder="username" name="username" />
-            </div>
-            <div class='input-wrapper'>
-                <input type="text" placeholder="password" name="password" />
-            </div>
-            <div class="submit-wrapper">
-                <input type="submit" value="Enter" />
-            </div>
-        </form>
-    </body>
-`)
+    res.sendFile(path.join(__dirname, "../pages/enter.html"))
 });
 
 router.post('/', (req, res) => {
-    res.redirect('/')
+    res.redirect('/home')
+    // res.send(`
+    // <div>
+    //! write your html here
+    // <a href="/home">continue</a>
+    // </div>
+    // `)
 });
 
 module.exports = router;
