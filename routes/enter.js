@@ -3,11 +3,14 @@ const router = express.Router();
 const path = require('path');
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "../pages/enter.html"))
+    res.sendFile(path.join(__dirname, "../pages/enter.html"));
 });
 
 router.post('/', (req, res) => {
-    res.redirect('/home')
+    res.redirect('/home');
+
+
+    // for exercise #4
     // res.send(`
     // <div>
     //! write your html here
