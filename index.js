@@ -3,16 +3,20 @@ const enterRouter = require('./routes/enter');
 const errorRouter = require('./routes/error');
 const homeRouter = require('./routes/home');
 const nonExistentUrl = require('./middlewares/nonexistenturl');
+const bodyParser = require('body-parser')
 
 const app = express();
 const port = 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(bodyParser.json());
+
 
 app.get('/', (req, res) => {
     res.redirect('/enter')
 });
+
 
 app.use('/home', homeRouter);
 app.use('/error', errorRouter);
