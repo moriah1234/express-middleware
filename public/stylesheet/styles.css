@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,13 +20,18 @@
     background: #fff;
 }
 
-img {
+.img {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100vw;
     height: 100vh;
+}
+
+.tiny {
+    width: 5vw;
+    margin-bottom: 5vh;
 }
 
 body {
@@ -71,7 +78,7 @@ input:not([type="submit"]) {
     border-right-color: #ffffff;
 }
 
-input[type="submit"] {
+input[type="submit"], .next {
     width: 10vw;
     height: 6vh;
     background-color: #bfbfbf;
@@ -106,6 +113,8 @@ input[type="submit"] {
     text-align: center;
     justify-self: flex-end;
     box-shadow: 1px 1px #000, -1px -1px #000;
+    cursor: pointer;
+
 }
 
 form {
@@ -140,3 +149,21 @@ p {
     font-size: 6rem;
     color: red;
 }
+#popup{
+    position: absolute;
+    margin-top: 10vh;
+    margin-right: 5vw;
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.next {
+    position: absolute;
+    bottom: 4vh
+}
+

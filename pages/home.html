@@ -1,6 +1,8 @@
 <head>
     <title>Home</title>
     <link rel='stylesheet' href='/stylesheet/styles.css' />
+    <link rel="icon" href="/icon.png"/>
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
     <link rel="stylesheet"
@@ -8,17 +10,38 @@
 </head>
 
 <body className="enter-body">
-    <img src="/wallpaper.jpg" />
+    <img class="img" src="/wallpaper.jpg" />
     <div class="container-wrapper">
         <div class="container">
             <div class="topbar">
                 <span class="title">
                     Home
                 </span>
-                <span class="material-symbols-outlined button q">question_mark</span>
-                <span class="material-symbols-outlined button x">close</span>
+                <span class="material-symbols-outlined button q" onclick="togglePopup()">question_mark</span>
+                <span class="material-symbols-outlined button x" onclick="navigateToEnter()">close</span>
             </div>
             <p>Welcome to our beautiful website</p>
         </div>
     </div>
+    <div id="popup" class="container hide" style="justify-content: center;">
+        <div class="topbar">
+            <span class="title">
+                Info
+            </span>
+            <span class="material-symbols-outlined button x" onclick="togglePopup()">close</span>
+        </div>
+        <img class="tiny" src="Zoom-icon.png"/>
+        <p id="popup-text">Nothing to see here...</p>
+    </div>
+
+    <script>
+        function navigateToEnter() {
+            window.location.href = "/enter"
+        }
+        function togglePopup() {
+            let popup = document.getElementById('popup');
+            popup.classList.toggle('show');
+        }
+    </script>
+
 </body>
