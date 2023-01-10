@@ -1,13 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #000;
     font-size: 20px;
     font-family: "Space Mono", monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000000;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 43vh;
+    position: absolute;
+    bottom: 0;
+}
+
+p {
+    text-align: center;
+    text-shadow: 1px 1px #fff, 1px 1px #fff;
+}
+
+
+input:not([type="submit"]) {
+    padding-left: 1vw;
+    border: #000000 solid 1.5px;
+    border-bottom-color: #9c9a9a;
+    border-right-color: #9c9a9a;
+    height: 6vh;
+    width: 17vw;
+}
+
+#warning {
+    margin-top: 3vh;
+    font-size: 6rem;
+    color: red;
+}
+
+#popup{
+    position: absolute;
+    margin-top: 10vh;
+    margin-right: 5vw;
 }
 
 ::-moz-selection {
@@ -34,15 +78,6 @@
     margin-bottom: 5vh;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #000000;
-}
-
 .container-wrapper {
     border: #bfbfbf solid 1.5px;
     border-bottom-color: #000000;
@@ -63,14 +98,6 @@ body {
     border-bottom-color: #747171;
 }
 
-input:not([type="submit"]) {
-    padding-left: 1vw;
-    border: #000000 solid 1.5px;
-    border-bottom-color: #9c9a9a;
-    border-right-color: #9c9a9a;
-    height: 6vh;
-    width: 17vw;
-}
 
 .input-wrapper {
     border: #747171 solid 1.5px;
@@ -104,6 +131,7 @@ input[type="submit"], .next {
 .error {
     background-image: linear-gradient(to right, #e18c96, #c46a70, #a64a4b, #862a28, #660303); 
 }
+
 .button {
     background-color: #bfbfbf;
     color: #666;
@@ -117,21 +145,6 @@ input[type="submit"], .next {
 
 }
 
-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    height: 43vh;
-    position: absolute;
-    bottom: 0;
-}
-
-p {
-    text-align: center;
-    text-shadow: 1px 1px #fff, 1px 1px #fff;
-}
-
 .title {
     grid-column: 1 / 2;
 }
@@ -142,18 +155,12 @@ p {
 
 .q {
     grid-column: 2 / 3;
+    
+}
+a {
+    color: #666;
 }
 
-#warning {
-    margin-top: 3vh;
-    font-size: 6rem;
-    color: red;
-}
-#popup{
-    position: absolute;
-    margin-top: 10vh;
-    margin-right: 5vw;
-}
 .hide {
     display: none;
 }
@@ -167,3 +174,6 @@ p {
     bottom: 4vh
 }
 
+.button:active, input[type="submit"]:active {
+    scale: .95;
+}
