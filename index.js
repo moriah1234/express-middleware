@@ -3,7 +3,8 @@ const enterRouter = require('./routes/enter');
 const errorRouter = require('./routes/error');
 const homeRouter = require('./routes/home');
 const nonExistentUrl = require('./middlewares/nonexistenturl');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 const port = 8000;
@@ -18,6 +19,10 @@ app.get('/', (req, res) => {
 });
 
 
+app.get('/oops', (req, res) => {
+    res.sendFile(path.join(__dirname, "/pages/oops.html"));
+});
+
 app.use('/home', homeRouter);
 app.use('/error', errorRouter);
 app.use('/enter', enterRouter);
@@ -25,4 +30,4 @@ app.use('/*', nonExistentUrl);
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
-})
+});

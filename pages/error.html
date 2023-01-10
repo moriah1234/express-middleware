@@ -1,6 +1,7 @@
 <head>
-    <title>Home</title>
+    <title>Error</title>
     <link rel='stylesheet' href='/stylesheet/styles.css' />
+    <link rel="icon" href="/icon.png"/>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
@@ -8,15 +9,15 @@
 </head>
 
 <body className="enter-body">
-    <img src="/wallpaper.jpg" />
+    <img class="img" src="/wallpaper.jpg" />
     <div class="container-wrapper">
         <div class="container">
             <div class="topbar error">
                 <span class="title">
                     Critical Error
                 </span>
-                <span class="material-symbols-outlined button q">question_mark</span>
-                <span class="material-symbols-outlined button x">close</span>
+                <a href="https://http.cat/403" target="_blank" class="button q"><span class="material-symbols-outlined">question_mark</span></a>
+                <span class="material-symbols-outlined button x" onclick="navigateToEnter()">close</span>
             </div>
             <span id="warning" class="material-symbols-outlined">
                 warning
@@ -24,4 +25,10 @@
             <p>You are not allowed here</p>
         </div>
     </div>
+
+    <script>
+        function navigateToEnter() {
+            window.location.href="/enter"
+        }
+    </script>
 </body>
