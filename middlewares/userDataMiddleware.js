@@ -1,6 +1,4 @@
-
-const fs = require('fs');
-const fout = fs.createWriteStream('user-data-get.txt', 'utf-8');
+const writeToLogFile = require('../functions/writeToLogFile');
 
 function userDataMiddleware(req, res, next) {
 
@@ -13,7 +11,9 @@ function userDataMiddleware(req, res, next) {
         userAgent: req.get('User-Agent'),
     };
 
-    fout.write(JSON.stringify(data).concat('\n'));
+    writeToLogFile(data);
+
     next()
 };
+
 module.exports = userDataMiddleware;

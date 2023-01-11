@@ -1,6 +1,5 @@
 
-const fs = require('fs');
-const fout = fs.createWriteStream('user-data-get.txt', 'utf-8');
+const writeToLogFile = require('../functions/writeToLogFile');
 
 function userDataMiddleware2(req, res, next) {
 
@@ -14,9 +13,9 @@ function userDataMiddleware2(req, res, next) {
         login: res.locals.isBlocked ? "BLOCKED" : "ALLOWED"
     };
 
-
-    fout.write(JSON.stringify(data).concat('\n'));
+    writeToLogFile(data);
 
     next();
 };
+
 module.exports = userDataMiddleware2;
