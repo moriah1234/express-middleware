@@ -1,6 +1,6 @@
 function checkIpMiddleware(req, res, next) {
 
-    if (req.connection.remoteAddress !== '::1' && req.originalUrl !== '/error') {
+    if (req.connection.remoteAddress !== '::1') {
 
         res.locals.isBlocked = true;
         console.log('ip bad');
