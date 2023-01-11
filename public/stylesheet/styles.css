@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-size: 20px;
+    color: #000;
     font-family: "Space Mono", monospace;
 }
 
@@ -45,7 +46,7 @@ input:not([type="submit"]) {
 #warning {
     margin-top: 3vh;
     font-size: 6rem;
-    color: red;
+    color: #920303;
 }
 
 #popup{
@@ -134,7 +135,6 @@ input[type="submit"], .next {
 
 .button {
     background-color: #bfbfbf;
-    color: #666;
     border: #fff solid 2px;
     border-right-color: #747171;
     border-bottom-color: #747171;
@@ -157,16 +157,9 @@ input[type="submit"], .next {
     grid-column: 2 / 3;
     
 }
-a {
-    color: #666;
-}
-
-.hide {
-    display: none;
-}
 
 .show {
-    display: flex;
+    display: none;
 }
 
 .next {
