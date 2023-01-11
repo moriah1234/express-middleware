@@ -158,12 +158,8 @@ input[type="submit"], .next {
     
 }
 
-.hide {
-    display: none;
-}
-
 .show {
-    display: flex;
+    display: none;
 }
 
 .next {
