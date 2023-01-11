@@ -23,10 +23,10 @@
                     <input type="text" placeholder="Username" name="username" />
                 </div>
                 <div class='input-wrapper'>
-                    <input type="text" placeholder="Password" name="password" />
+                    <input type="password" placeholder="Password" name="password" />
                 </div>
                 <div class='input-wrapper'>
-                    <input type="text" placeholder="Mail" name="mail" />
+                    <input type="email" placeholder="Mail" name="mail" />
                 </div>
                 <div class='input-wrapper'>
                     <input type="text" placeholder="Phone number" name="phonenumber" />
@@ -35,7 +35,7 @@
             </form>
         </div>
     </div>
-    <div id="popup" class="container show">
+    <div id="popup" class="container y">
         <div class="topbar">
             <span class="title">
                 Missions:
@@ -50,7 +50,7 @@
         const missions = [
             "1. Log user data on request to /enter.",
             "2. Block post requests that don't come from your IP, add BLOCK or ALLOW to your log file accordingly.",
-            "3. Validate the body of post requests to /enter, add SUCCESS or FAILED accordingly.",
+            "3. Validate the body of post requests to /enter.",
             "4. Password ranking middleware."
         ]
         function togglePopup() {
